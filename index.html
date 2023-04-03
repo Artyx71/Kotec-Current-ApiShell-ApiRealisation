@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lorem Picsum API Demo</title>
+  </head>
+  <body>
+    <button onclick="getRandomImage()">Generate Random Image</button>
+    <br><br>
+    <img id="random-image" src="" alt="">
+    <script>
+      function getRandomImage() {
+        const imgWidth = 400;
+        const imgHeight = 300;
+        const randomId = Math.floor(Math.random() * 1000);
+        const imageUrl = `https://picsum.photos/id/${randomId}/${imgWidth}/${imgHeight}`;
+        document.getElementById("random-image").src = imageUrl;
+      }
+    </script>
+  </body>
+</html>
